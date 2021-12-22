@@ -1,7 +1,7 @@
-mixin service(image, alt, title, text)
-  article.service
-    .service-image
-      img(src=`../images/${image}`, alt=`${alt}`)
-    .service-content
+include ../atoms/_mixin-icon
+mixin service(title, text, iconName)
+  article.service 
+    +icon('medium', iconName)
+    .service--content
       h3.header--small= title
       p.text= text

@@ -1,4 +1,6 @@
-nav.nav
+span.jam.jam-menu#open-menu-button
+nav.main-menu#main-menu
+  span.jam.jam-close#close-menu-button
   ul.menu--list
     each page in pages
       li.menu--item: a(href=`${page.toLowerCase().trim().replace(' ', '-')}.html`).menu--link= page

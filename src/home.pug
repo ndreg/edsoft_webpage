@@ -4,66 +4,46 @@ include ./html/atoms/_mixin-button
 include ./html/molecules/_mixin-social
 include ./html/molecules/_mixin-service
 include ./html/molecules/_mixin-section
+include ./html/molecules/_mixin-project
 
 block append config
   - actual_page = "Home"
 
 block append main
-  +mixin-section('home')
-    article.section--content
-      div.section--text
-        h1.header--big Bienvenidos a EDsoft
-        p.text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, tempore animi. Quibusdam doloribus eos quidem?
-      div.section--banner
-        +image('computer.svg', 'Main banner', 'big')
-      div.section--buttons
-        +button('#', 'Ver Proyecto')
+  +mixin-section('main-banner')
+    .content-wrapper.content
+      div.container
+        h1.title Bienvenidos a EDsoft
+        p.subtitle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, tempore animi. Quibusdam doloribus eos quidem?
+        div: +button('#', 'Ver Proyectos', 'white')
+      div.container
+        +image('computer.svg', 'Main banner', 'image')
 
-  +mixin-section('services')
+  +mixin-section('services-section')
     h2.header--medium Nuestros Servicios
-      +service('Servicio 1', 'Lorem ipsum dolor sit amet consectetur adipisicing', 'phone')
-      +service('Servicio 2', 'Lorem ipsum dolor sit amet consectetur adipisicing', 'computer')
-      +service('Servicio 3', 'Lorem ipsum dolor sit amet consectetur adipisicing', 'keyboard')
+    .content-wrapper
+      +service('Servicio 1', 'phone')
+      +service('Servicio 2', 'computer')
+      +service('Servicio 3', 'keyboard')
 
-  +mixin-section('about')
+  +mixin-section('about-section')
+    h2.title Sobre nosotros
+    .content-wrapper
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis facere assumenda dicta dolore numquam.
+      +button('#', 'Contactanos', 'white', 'ghost')
     +image('bg-section.jpg', 'Background section', 'background')
-    h2.header--medium Sobre nosotros
-    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis facere assumenda dicta dolore numquam.
-    +button('#', 'Contactanos')
 
-  +mixin-section('projects')
-    h2.header--medium Nuestros proyectos 
-    article.projects--container
-      a(href="#" target="_blank"): .project--item
-        .project--image 
-          +image('project-1.jpg', 'Main Banner', 'medium')
-        .project--content
-          h3.header--small Proyecto 1
-          p.text Lorem ipsum dolor sit, amet consectetur adipisicing.
+  +mixin-section('projects-section')
+    h2.title Nuestros proyectos 
+    .content-wrapper
+      +project('1')
+      +project('2')
+      +project('3')
+      +project('4')
+      +project('5')
 
-      a(href="#" target="_blank"): .project--item
-        .project--image 
-          +image('project-2.jpg', 'Main Banner', 'medium')
-        .project--content
-          h3.header--small Proyecto 1
-          p.text Lorem ipsum dolor sit, amet consectetur adipisicing.
-
-      a(href="#" target="_blank"): .project--item
-        .project--image 
-          +image('project-3.jpg', 'Main Banner', 'medium')
-        .project--content
-          h3.header--small Proyecto 1
-          p.text Lorem ipsum dolor sit, amet consectetur adipisicing.
-
-      a(href="#" target="_blank"): .project--item
-        .project--image 
-          +image('project-4.jpg', 'Main Banner', 'medium')
-        .project--content
-          h3.header--small Proyecto 1
-          p.text Lorem ipsum dolor sit, amet consectetur adipisicing.
-
-  +mixin-section('work')
-    h2.header--medium Trabaja con nosotros
-    p.text Lorem, ipsum dolor sit amet consectetur adipisicing.
+  +mixin-section('work-with-us')
+    h2.title Trabaja con nosotros
+    p.subtitle Lorem, ipsum dolor sit amet consectetur adipisicing.
     +button('#', 'contacto@edsoft.com')
     +social

@@ -1,4 +1,35 @@
 extends ../html/_template
+include ../html/molecules/_mixin-section
+include ../html/molecules/_mixin-social
+
 
 block append config
   - actual_page = "Contact"
+
+block append main
+  +mixin-section('contact-section')
+    h1.title Contactanos 
+    .content-wrapper
+      div
+        h3 Tienes algo que decir?
+        div
+      address 
+        .contact-item 
+          h4 Telefono
+          p
+            span.jam.jam-phone
+            a(href="tel:123456789") (123) 543211 - 428 
+        .contact-item
+          h4 Correo electronico
+          p
+            span.jam.jam-newsletter
+            a(href="mailto:unionsovietica@gmail.com") edsoft@contacto.com
+        .contact-item 
+          h4 Redes sociales
+            +social
+        .contact-item
+          h4 Direccion
+          p 
+            span.jam.jam-map-marker
+            a(href="#") Calle Falsa #123. Springfield, Oregon, Estados Unidos 
+        <iframe class="map-ubication" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25245384.420568317!2d-73.8042712592429!3d67.28192657277502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea20dbbe3c07715%3A0x34cf9d830114e218!2sGroenlandia!5e0!3m2!1ses-419!2sco!4v1640162981400!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

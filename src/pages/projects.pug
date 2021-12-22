@@ -1,4 +1,17 @@
 extends ../html/_template
+include ../html/molecules/_mixin-section
+include ../html/molecules/_mixin-project-page
 
 block append config
   - actual_page = "Projects"
+
+block append main
+  +mixin-section('projects-section')
+    h1.title Nuestros proyectos
+    .content-wrapper
+      +project('1', 'Australia')
+      +project('2', 'Nueva Zelanda')
+      +project('3', 'Japon')
+      +project('4', 'Argentina')
+      +project('5', 'Colombia')
+      +project('1', 'Reino Unido')

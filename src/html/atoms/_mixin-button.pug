@@ -1,2 +1,2 @@
-mixin button(link, text)
-  a(href=`${link}`).button= text 
+mixin button(link, text, color, type)
+  a(href=`${link}` class=`button ${color} ${type}`)= text 

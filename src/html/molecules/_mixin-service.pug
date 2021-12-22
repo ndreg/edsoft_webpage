@@ -1,7 +1,8 @@
 include ../atoms/_mixin-icon
-mixin service(title, text, iconName)
-  article.service 
+
+mixin service(title, iconName)
+  article.service-item 
     +icon('medium', iconName)
     .service--content
-      h3.header--small= title
-      p.text= text
+      h3 #{title}
+      p Lorem ipsum dolor sit amet consectetur adipisicing

@@ -1,4 +1,14 @@
 extends ../html/_template
+include ../html/molecules/_mixin-section
+include ../html/molecules/_mixin-about
 
 block append config
   - actual_page = "About Us"
+
+block append main
+  +mixin-section('about-us')
+    h1.title Quienes somos
+    .content-wrapper
+      +about('Sobre nosotros', '1')
+      +about('Nuestra mision', '2')
+      +about('Nuestra vision', '3')

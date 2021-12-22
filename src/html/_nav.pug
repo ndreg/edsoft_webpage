@@ -1,0 +1,4 @@
+nav.nav
+  ul.menu--list
+    each page in pages
+      li.menu--item: a(href=`${page.toLowerCase().trim().replace(' ', '-')}`).menu--link= page

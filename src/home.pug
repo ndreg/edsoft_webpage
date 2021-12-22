@@ -1,0 +1,25 @@
+extends ./html/_template
+include ./html/molecules/_mixin-section
+include ./html/atoms/_mixin-button
+include ./html/molecules/_mixin-service
+
+block append config
+  - actual_page = "Home"
+
+block append main
+  +mixin-section('home')
+    div.section--content
+      div.section--text
+        h1.header--big Bienvenidos a EDsoft
+        p.text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, tempore animi. Quibusdam doloribus eos quidem?
+      div.section--banner
+        img(src='../images/computer.svg', alt='Main Banner')
+      div.section--buttons
+        +button('#', 'Ver Proyecto')
+
+  +mixin-section('services')
+    h2.header--medium Nuestros Servicios
+      +service('project-1.jpg', 'Proyecto #1', 'Servicio 1', 'Lorem ipsum dolor sit amet consectetur adipisicing')
+      +service('project-2.jpg', 'Proyecto #1', 'Servicio 1', 'Lorem ipsum dolor sit amet consectetur adipisicing')
+      +service('project-3.jpg', 'Proyecto #1', 'Servicio 1', 'Lorem ipsum dolor sit amet consectetur adipisicing')
+

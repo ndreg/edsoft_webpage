@@ -4,6 +4,12 @@
 
 This webpage was created following EDteam's My first web page course.
 
+### Wireframe
+
+![Wireframe](https://i.imgur.com/wFrmWLf.png)
+
+_Sorry for that Spanglish_
+
 Created using
 
 - pug

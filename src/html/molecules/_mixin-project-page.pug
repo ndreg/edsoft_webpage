@@ -1,0 +1,10 @@
+include ../atoms/_mixin-image
+
+mixin project(image, country)
+  article.card-project
+    .image-container 
+      +image(`project-${image}.jpg`, alt=`Proyecto ${image}`)
+    div
+      h4 Proyecto #{image}
+      p Construccionde aplicacion web para nuestro cliente en #{country}.
+      a(href="#" target="_blank") Ver proyecto

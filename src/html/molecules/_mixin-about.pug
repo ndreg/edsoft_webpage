@@ -1,0 +1,8 @@
+include ../atoms/_mixin-image
+mixin about(title, image)
+  article.about-item 
+    .image-container
+      +image(`about-${image}.jpg`)
+    div
+      h2= title
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, sequi animi? Eveniet laudantium, dolorum sint perspiciatis nemo quidem perferendis officia aut ullam fuga labore, at ratione minus molestiae eligendi, nostrum quibusdam. Quas culpa natus quaerat!

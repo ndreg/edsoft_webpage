@@ -1,0 +1,8 @@
+include ../atoms/_mixin-image
+mixin project(image)
+   a(href="#" target="_blank" class="project-item"): article
+    div
+      h4 Proyecto #{image}
+      p Lorem ipsum dolor sit, amet consectetur adipisicing.
+    .image-container 
+      +image(`project-${image}.jpg`, alt=` Proyecto ${image}`)
